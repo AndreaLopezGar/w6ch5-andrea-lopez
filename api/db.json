@@ -1,0 +1,38 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Satoru",
+      "surname": "Goyo",
+      "power": "infinity",
+      "class": "special"
+    },
+    {
+      "id": 2,
+      "name": "Yuji",
+      "surname": "Itadori",
+      "power": "brutal stregth",
+      "level": "student"
+    },
+    {
+      "id": 3,
+      "name": "Nobara",
+      "surname": "Kugisaki",
+      "power": "Vudu Doll",
+      "level": "student"
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 6
+    },
+    {
+      "name": "Satorytuu",
+      "surname": "Gotyutyo",
+      "power": "infiniyutyty",
+      "class": "spectyuytial",
+      "id": 7
+    }
+  ]
+}
