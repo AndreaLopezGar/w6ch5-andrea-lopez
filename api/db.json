@@ -5,34 +5,50 @@
       "name": "Satoru",
       "surname": "Goyo",
       "power": "infinity",
-      "class": "special"
+      "class": "Special"
     },
     {
       "id": 2,
       "name": "Yuji",
       "surname": "Itadori",
-      "power": "brutal stregth",
-      "level": "student"
+      "power": "Brutal Stregth",
+      "level": "Student"
     },
     {
       "id": 3,
       "name": "Nobara",
       "surname": "Kugisaki",
       "power": "Vudu Doll",
-      "level": "student"
+      "level": "Student"
     },
     {
-      "id": 4
+      "id": 4,
+      "name": "Megumi",
+      "surname": "Fushiguro",
+      "power": "He can use the powers of animals",
+      "class": "Student"
     },
     {
-      "id": 6
+      "id": 5,
+      "name": "Maki",
+      "surname": "Zenin",
+      "power": "Marcial Arts",
+      "class": "Student"
     },
     {
-      "name": "Satorytuu",
-      "surname": "Gotyutyo",
-      "power": "infiniyutyty",
-      "class": "spectyuytial",
-      "id": 7
+      "id": 6,
+      "name": "Panda",
+      "surname": "Panda",
+      "power": "He can become in any animal",
+      "class": "Student"
+    },
+
+    {
+      "id": 7,
+      "name": "Suguro",
+      "surname": "Geto",
+      "power": "Can keep any kind of course and use it any time for his own will",
+      "class": "Special"
     }
   ]
 }
