@@ -1,13 +1,11 @@
 import { Router as createRouter } from 'express';
-import {
-  create,
-  getAll,
-  getById,
-  remove,
-  update,
-} from '../controller/character.controller.js';
+import { CharactersController } from '../controllers/characters.controller.js';
+import createDebug from 'debug';
+
+const debug = createDebug('JJK:characters:router');
 
 export const charactersRouter = createRouter();
+debug('Starting');
 
 charactersRouter.get('/', getAll);
 charactersRouter.get('/:id', getById);
