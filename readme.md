@@ -1,4 +1,4 @@
-# Week 7 - Challenge 1
+# Week 7 - Challenge 1 ·
 
 ## API REST Things I already know / Lo que queráis
 
