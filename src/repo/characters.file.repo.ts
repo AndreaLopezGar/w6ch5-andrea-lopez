@@ -5,6 +5,7 @@ import createDebug from 'debug';
 import { HttpError } from '../types/http.error.js';
 
 const debug = createDebug('JJK:characters:file:repo');
+
 export class CharactersFileRepo implements Repository<Character> {
   file: string;
   characters: Character[];

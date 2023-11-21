@@ -42,13 +42,19 @@
       "power": "He can become in any animal",
       "class": "Student"
     },
-
     {
       "id": 7,
       "name": "Suguro",
       "surname": "Geto",
       "power": "Can keep any kind of course and use it any time for his own will",
       "class": "Special"
+    },
+    {
+      "name": "Andrea",
+      "surname": "López",
+      "power": "Hola",
+      "class": "special",
+      "id": 8
     }
   ]
 }
