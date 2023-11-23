@@ -1,18 +1,22 @@
 import { NextFunction, Request, Response } from 'express';
 import createDebug from 'debug';
-import { CharactersFileRepo } from '../repo/characters.file.repo.js';
+import { Character } from '../entities/character';
+import { Repository } from '../repo/repo';
 
-const debug = createDebug('JJK:characters:controller');
+const debug = createDebug('W7E:characters:controllers');
 export class CharactersController {
-  repo: CharactersFileRepo;
-  constructor() {
-    debug('Instantiated');
-    this.repo = new CharactersFileRepo();
+  // eslint-disable-next-line no-unused-vars
+  constructor(private repo: Repository<Character>) {
+    debug('Hola desde el controller');
   }
 
-  async getAll(_req: Request, res: Response) {
-    const result = await this.repo.getAll();
-    res.json(result);
+  async getAll(_req: Request, res: Response, next: NextFunction) {
+    try {
+      const result = await this.repo.getAll();
+      res.json(result);
+    } catch (error) {
+      next(error);
+    }
   }
 
   async getById(req: Request, res: Response, next: NextFunction) {
@@ -24,18 +28,24 @@ export class CharactersController {
     }
   }
 
-  search = (_req: Request, _res: Response) => {};
-
-  async create(req: Request, res: Response) {
-    const result = await this.repo.create(req.body);
-    res.status(201);
-    res.statusMessage = 'Created';
-    res.json(result);
+  async create(req: Request, res: Response, next: NextFunction) {
+    try {
+      const result = await this.repo.create(req.body);
+      res.status(201);
+      res.statusMessage = 'Created';
+      res.json(result);
+    } catch (error) {
+      next(error);
+    }
   }
 
-  async update(req: Request, res: Response) {
-    const result = await this.repo.update(req.params.id, req.body);
-    res.json(result);
+  async update(req: Request, res: Response, next: NextFunction) {
+    try {
+      const result = await this.repo.update(req.params.id, req.body);
+      res.json(result);
+    } catch (error) {
+      next(error);
+    }
   }
 
   async delete(req: Request, res: Response, next: NextFunction) {
