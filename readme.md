@@ -1,34 +1,27 @@
-# Week 7 - Challenge 1 ·
+# Week 7 - Challenge 2
 
-## API REST Things I already know / Lo que queráis
+## API REST Things I already know / Lo que queráis (V)
 
-Crea una API REST que se conecte a un fichero JSON, para manipular recursos de tipo _cosas que ya sé_. El JSON tendrá una sola propiedad de tipo array, donde almacenarán objetos que representarán cosas que hemos aprendido en el bootcamp.
+Continuamos el API REST del Challenge anterior, que:
 
-La API REST debe tener los siguientes endpoints:
+- un endpoint de Films
+- un endpoint de Users
 
-[GET] /things -> devuelve el array de cosas que ya sé
+Utilizan repos que conecta con MongoDB usando Mongoose
 
-[GET] /things/:idThing -> devuelve una cosa que ya sé
+- El modelo de datos estará representado como "entity" en una carpeta/fichero independiente.
+- Las rutas son /register y /login
+- El repositorio y el controller son clases que se instancian en el Router.
+- El interface del repositorio se inyecta en el controller (inversión de dependencias).
+- Les errores se controlan mediante un middleware de errores.
 
-[DELETE] /things/:idThing -> borra una cosa que ya sé
+/register registra usuarios y **encripta** la password
+/login comprueba el login y si es correcto devuelve los datos del usuario y **el token**
 
-[POST] /things -> crea una cosa que ya sé (la recibe en el body)
+Creamos un interceptor para el login y protegemos las rutas de Films
 
-[PATCH] /things/:id -> modifica una cosa que ya sé (la recibe en el body)
+Probamos que funciona desde postman y desde un front
 
-Usamos express con las capas:
+Se testa el 100% del backend completo: Things & Films & User & All.
 
-- app
-- router
-- controller
-- model
-- (opcional repo)
-
-AÑADIMOS un front con REDUX testado
-
-- Lista de 'things'
-- Añadir 'thing'
-- Borrar 'thing'
-- Editar 'thing'
-
-- Página de detalle
+Se publica en Render (https://render.com/)
